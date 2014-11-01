@@ -251,20 +251,20 @@ class Command implements \ArrayAccess, \Iterator
 
     /**
      * @param Option $option
-     * @param \Closure $callback (string $value) -> boolean
+     * @param callable $callback (string $value) -> boolean
      * @return Option
      */
-    private function _must(Option $option, \Closure $callback)
+    private function _must(Option $option, callable $callback)
     {
         return $option->setRule($callback);
     }
 
     /**
      * @param Option $option
-     * @param \Closure $callback
+     * @param callable $callback
      * @return Option
      */
-    private function _map(Option $option, \Closure $callback)
+    private function _map(Option $option, callable $callback)
     {
         return $option->setMap($callback);
     }

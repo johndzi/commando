@@ -169,7 +169,7 @@ class Option
      * @param closure|string $rule regex, closure
      * @return Option
      */
-    public function setMap(\Closure $map)
+    public function setMap(callable $map)
     {
         $this->map = $map;
         return $this;
